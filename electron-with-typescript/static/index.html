@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Electron with TypeScript</title>
+        <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="../node_modules/bulma/css/bulma.css" />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <section class="hero is-primary is-medium" id="nav-section">
+            <div class="hero-head">
+                <header class="nav">
+                    <div class="container">
+                        <div class="nav-left">
+                            <a class="nav-item is-active"> Electron with TypeScript Hands-On Labs </a>
+                        </div>
+                        <span class="nav-toggle" id="btn-toggle" data-target="nav-menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <div class="nav-right nav-menu" id="nav-menu">
+                            <a class="nav-item is-active"> #general </a>
+                            <span class="nav-item" id="btn-logout">
+                                <a class="button is-primary is-inverted">
+                                    <span class="icon">
+                                        <i class="fa fa-sign-out"></i>
+                                    </span>
+                                    <span>Logout</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </section>
+        <section class="section" id="login-section">
+            <div class="container">
+                <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                        <input class="input" type="email" id="email" placeholder="Email" />
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fa fa-check"></i>
+                        </span>
+                    </p>
+                </div>
+                <div class="field">
+                    <p class="control has-icons-left">
+                        <input class="input" type="password" id="password" placeholder="Password" />
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                    </p>
+                </div>
+                <div class="field">
+                    <p class="control">
+                        <button class="button is-success" id="btn-login">Login</button>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section hero is-primary" id="chat-section">
+            <div class="container" id="message-container"></div>
+        </section>
+        <section class="section" id="write-section">
+            <div class="container">
+                <div class="field">
+                    <div class="control">
+                        <textarea id="message" class="textarea" placeholder="Explain how we can help you"></textarea>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-primary" id="btn-send-message">Send message</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            require("../output/renderer/index.js");
+        </script>
+    </body>
+</html>
