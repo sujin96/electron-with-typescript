@@ -26,7 +26,7 @@ function main() {
     input_password.addEventListener("keypress", (e) => {
         if (e.code === "Enter") {
             if (input_email.value.length < 4 || !validateEmail(input_email.value)) {
-                const win = remote_1.getCurrentWindow();
+                const win = (0, remote_1.getCurrentWindow)();
                 remote_1.dialog
                     .showMessageBox(win, {
                     message: "Login Failed",
@@ -38,7 +38,7 @@ function main() {
                 return;
             }
             if (input_password.value.length < 4) {
-                const win = remote_1.getCurrentWindow();
+                const win = (0, remote_1.getCurrentWindow)();
                 remote_1.dialog
                     .showMessageBox(win, {
                     message: "Login Failed",
@@ -58,7 +58,7 @@ function main() {
     });
     btnLogin.addEventListener("click", () => {
         if (input_email.value.length < 4 || !validateEmail(input_email.value)) {
-            const win = remote_1.getCurrentWindow();
+            const win = (0, remote_1.getCurrentWindow)();
             remote_1.dialog
                 .showMessageBox(win, {
                 message: "Login Failed",
@@ -70,7 +70,7 @@ function main() {
             return;
         }
         if (input_password.value.length < 4) {
-            const win = remote_1.getCurrentWindow();
+            const win = (0, remote_1.getCurrentWindow)();
             remote_1.dialog
                 .showMessageBox(win, {
                 message: "Login Failed",
@@ -129,7 +129,7 @@ function main() {
     electron_1.ipcRenderer.on("login-error", (event, code) => {
         console.log("receive : login-error");
         if (code === "auth/user-not-found") {
-            const win = remote_1.getCurrentWindow();
+            const win = (0, remote_1.getCurrentWindow)();
             remote_1.dialog
                 .showMessageBox(win, {
                 message: "Login Failed",
@@ -141,7 +141,7 @@ function main() {
             return;
         }
         else if (code === "auth/wrong-password") {
-            const win = remote_1.getCurrentWindow();
+            const win = (0, remote_1.getCurrentWindow)();
             remote_1.dialog
                 .showMessageBox(win, {
                 message: "Login Failed",
